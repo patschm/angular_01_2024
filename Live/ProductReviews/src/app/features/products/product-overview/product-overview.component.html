@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <h2>{{productgroup.name}}</h2>
+  
+    <ul class="list-group">
+      <li (click)="select(product)" class="list-group-item" *ngFor="let product of products$ | async">
+        <div class="d-flex align-items-center">
+          <img src="https://angular-training.azureedge.net/{{product.image}}" [alt]="product.brand.name + ' ' + product.name" class="mr-3 w-25">
+          <div>
+            <h5 class="mb-1">{{product.brand.name + ' ' + product.name}}</h5>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
